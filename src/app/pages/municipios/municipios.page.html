@@ -1,20 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Municipios</ion-title>
+    <ion-title>Dados IBGE</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  
+  <div class="bgTexto">
+    <h2>Metadados da Malha Geográficos</h2>
+  </div>
   <ion-card *ngIf="metadados">
-    <ion-card-header>
-      <ion-card-title>Metadados da Malha Geográficos</ion-card-title>
-    </ion-card-header>
     <ion-card-content>
       <p><strong>Tipo:</strong> {{ metadados['nivel-geografico'] || 'N/A' }}</p>
       <p><strong>Extensão:</strong> {{ metadados.area?.dimensao || 'N/A' }} {{ metadados.area?.unidade?.nome || 'N/A' }}</p>
     </ion-card-content>
   </ion-card>
+
+  <div class="bgTexto">
+    <h2>Municipios</h2>
+    <p>Veja os municipios do estado selecionado:</p>
+  </div>
 
   <ion-list>
     <ion-item *ngFor="let municipio of municipios">
