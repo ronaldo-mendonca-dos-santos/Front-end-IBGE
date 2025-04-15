@@ -8,15 +8,11 @@
 
   <ion-card *ngIf="metadados">
     <ion-card-header>
-      <ion-card-title>Metadados da Malha</ion-card-title>
+      <ion-card-title>Metadados da Malha Geográficos</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <p><strong>Tipo:</strong> {{ metadados['nivel-geografico'] || 'N/A' }}</p>
       <p><strong>Extensão:</strong> {{ metadados.area?.dimensao || 'N/A' }} {{ metadados.area?.unidade?.nome || 'N/A' }}</p>
-      <p><strong>Projeção:</strong> {{ metadados.projecao || 'N/A' }}</p>
-      <p><strong>Formato:</strong> {{ metadados.formato || 'N/A' }}</p>
-      <p><strong>Data:</strong> {{ metadados.data || 'N/A' }}</p>
-      <p><strong>Fonte:</strong> {{ metadados.fonte || 'N/A' }}</p>
     </ion-card-content>
   </ion-card>
 
