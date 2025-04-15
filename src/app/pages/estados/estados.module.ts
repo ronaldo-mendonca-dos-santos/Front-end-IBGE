@@ -8,6 +8,7 @@ import { EstadosPageRoutingModule } from './estados-routing.module';
 
 import { EstadosPage } from './estados.page';
 
+
 @NgModule({
   imports: [
     CommonModule,

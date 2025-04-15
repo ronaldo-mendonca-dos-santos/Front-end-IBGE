@@ -18,4 +18,10 @@ export class IbgeService {
     return this.http.get(`${this.estadosUrl}/${ufId}/municipios`);
   }
 
+  getMetadados(ufId: number): Observable<any> {
+    return this.http.get(`https://servicodados.ibge.gov.br/api/v4/malhas/estados/${ufId}/metadados`);
+  }
+  
+  
+
 }
