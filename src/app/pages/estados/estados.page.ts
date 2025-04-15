@@ -16,13 +16,12 @@ interface Estado {
 })
 export class EstadosPage implements OnInit {
 
-  estados: Estado[] = [];  // Agora 'estados' é tipado com a interface 'Estado'
+  estados: Estado[] = [];
 
   constructor(private ibgeService: IbgeService, private router: Router) {}
 
   ngOnInit() {
     this.ibgeService.getEstados().subscribe(data => {
-      // Agora 'data' é do tipo 'Estado[]'
       this.estados = data.sort((a: Estado, b: Estado) => a.nome.localeCompare(b.nome));
     });
   }

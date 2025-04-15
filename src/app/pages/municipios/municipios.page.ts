@@ -23,19 +23,16 @@ export class MunicipiosPage implements OnInit {
     const estadoNome = this.route.snapshot.paramMap.get('nome');
 
     this.estadoId = estadoId ? +estadoId : 0;
-    this.estadoNome = estadoNome ?? ''; 
+    this.estadoNome = estadoNome ?? '';
 
-    // Obter municípios
     this.ibgeService.getMunicipios(this.estadoId).subscribe((data) => {
       this.municipios = data;
-      console.log('Municipios:', this.municipios); // Verifique os dados aqui
+      console.log('Municipios:', this.municipios);
     });
 
-    // Obter metadados
     this.ibgeService.getMetadados(this.estadoId).subscribe((data) => {
-      // Como 'data' é um array, vamos acessar o primeiro item
-      this.metadados = data[0]; // Acessando o primeiro item do array
-      console.log('Metadados:', this.metadados); // Verifique os dados aqui
+      this.metadados = data[0];
+      console.log('Metadados:', this.metadados);
     });
 
   }
