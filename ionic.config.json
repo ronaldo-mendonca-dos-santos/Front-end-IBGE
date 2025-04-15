@@ -1,0 +1,7 @@
+{
+  "name": "appIBGE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
